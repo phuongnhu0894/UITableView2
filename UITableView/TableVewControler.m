@@ -14,6 +14,7 @@
 
 @implementation TableVewControler {
     NSArray *arrayFruits;
+    NSArray *arrayPhotos;
 }
 
 - (void)viewDidLoad {
@@ -21,6 +22,8 @@
     
     self.title = @"Create TableView";
     arrayFruits = @[@"Apple", @"Banana", @"Water melon"];
+    arrayPhotos = @[@"apple", @"banana", @"watermelon"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +47,7 @@
     
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@", arrayFruits[indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:arrayPhotos[indexPath.row]];
     return cell;
 }
 
